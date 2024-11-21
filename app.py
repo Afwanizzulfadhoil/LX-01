@@ -10,7 +10,7 @@ from datetime import datetime
 
 
 dotenv_path = join(dirname(__file__), '.env')
-load_dotenv(load_dotenv)
+load_dotenv(dotenv_path)
 
 MONGODB_URI = os.environ.get("MONGO_DB")
 NAME_DB = os.environ.get("NAME_DB")
@@ -57,4 +57,4 @@ def save_diary():
     return jsonify({'msg': 'Upload complete!'})
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5500, debug=True) 
+    app.run('0.0.0.0', port=5000, debug=True) 
