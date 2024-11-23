@@ -71,7 +71,6 @@
                         let title = articles[i]["title"];
                         let content = articles[i]["content"];
                         let file = articles[i]["file"] || 'default-image.jpg';
-                        let profile = articles[i]["profile"];
                         let time = articles[i]["time"] || '????.??.??';
                         let temp_html
                             = `
@@ -107,6 +106,7 @@
             let profile = $("#profile").prop("files")[0];
 
             let form_data = new FormData();
+
             form_data.append("file_give", file);
             form_data.append("profile_give", profile);
             form_data.append("title_give", title);
